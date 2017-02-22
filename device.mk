@@ -168,6 +168,7 @@ PRODUCT_PACKAGES += \
     init.mmi.usb.rc \
     init.qcom.bt.sh \
     init.qcom.post_boot.sh \
+    init.qcom.power.rc \
     init.qcom.rc \
     init.qcom-ims.rc \
     init.qcom.ril.sh \
