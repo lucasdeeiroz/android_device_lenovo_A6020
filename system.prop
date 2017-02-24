@@ -1,6 +1,6 @@
-#
-# system.prop for A6020
-#
+# Art
+dalvik.vm.dex2oat-flags=--no-watch-dog
+ro.sys.fw.dex2oat_thread_count=4
 
 # Display
 debug.sf.hw=0
@@ -33,6 +33,7 @@ media.stagefright.less-secure=true
 # Data modules
 ro.use_data_netmgrd=true
 persist.data.netmgrd.qos.enable=true
+persist.data.mode=concurrent
 
 # SDcardFS
 ro.sys.sdcardfs=true
@@ -42,9 +43,6 @@ persist.timed.enable=true
 
 # CABL
 ro.qualcomm.cabl=0
-
-# Sdcard
-persist.fuse_sdcard=true
 
 # Audio
 ro.qc.sdk.audio.fluencetype=fluence
@@ -67,19 +65,32 @@ vidc.enc.narrow.searchrange=1
 #Factory Reset Protection
 ro.frp.pst=/dev/block/bootdevice/by-name/config
 
-# camera
-ro.vendor.extension_library=libqti-perfd-client.so
-media.stagefright.legacyencoder=true
-media.stagefright.less-secure=true
+# Camera
 persist.camera.cpp.duplication=false
+
+# Charger
+persist.sys.chgdisabled=0
+
+# Perf
+ro.vendor.extension_library=libqti-perfd-client.so
 
 # QMI
 persist.data.qmi.adb_logmask=0
 
 #Bluetooth
-ro.qualcomm.bt.hci_transport=smd
-qcom.bluetooth.soc=smd
 bluetooth.hfp.client=1
+qcom.bluetooth.soc=smd
+ro.bluetooth.dun=true
+ro.bluetooth.hfp.ver=1.7
+ro.bluetooth.sap=true
+ro.qualcomm.bluetooth.ftp=true
+ro.qualcomm.bluetooth.hfp=true
+ro.qualcomm.bluetooth.hsp=true
+ro.qualcomm.bluetooth.map=true
+ro.qualcomm.bluetooth.nap=true
+ro.qualcomm.bluetooth.opp=true
+ro.qualcomm.bluetooth.pbap=true
+ro.qualcomm.bt.hci_transport=smd
 
 # IMS
 net.lte.volte_call_capable=true
@@ -98,8 +109,8 @@ persist.dbg.volte_avail_ovr=1
 DEVICE_PROVISIONED=1
 rild.libpath=ril-wrapper.so
 rild.libargs=-d /dev/smd0
+ril.subscription.types=NV,RUIM
 ro.telephony.call_ring.multiple=false
-
 persist.rild.nitz_plmn=
 persist.rild.nitz_long_ons_0=
 persist.rild.nitz_long_ons_1=
@@ -109,8 +120,9 @@ persist.rild.nitz_short_ons_0=
 persist.rild.nitz_short_ons_1=
 persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
-
+persist.radio.apm_sim_not_pwdn=0
 persist.radio.rat_on=combine
-ril.subscription.types=NV,RUIM
 persist.volte_enalbed_by_hw=1
-persist.radio.apm_sim_not_pwdn=1
+
+# WiFi
+wifi.interface=wlan0
