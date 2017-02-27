@@ -167,9 +167,9 @@ PRODUCT_PACKAGES += \
     init.lineout.sh \
     init.mmi.usb.rc \
     init.qcom.bt.sh \
-    init.qcom.post_boot.sh \
     init.qcom.power.rc \
     init.qcom.rc \
+    init.qcom.sh \
     init.qcom.ril.sh \
     ueventd.qcom.rc
 
@@ -184,7 +184,7 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     sensors.msm8916 \
-	libcalmodule_common
+    libcalmodule_common
 
 # Stlport
 PRODUCT_PACKAGES += \
